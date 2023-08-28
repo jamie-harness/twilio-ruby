@@ -30,6 +30,20 @@ RSpec.configure do |config|
     @holodeck = Holodeck.new
     @client.http_client = @holodeck
   end
+  if ENV['INTEL']
+    config.before(:suite) do
+      ReverseCoverageRspec::Main.start
+    end
+
+    config.around do |e|
+      e.run
+      ReverseCoverageRspec::Main.add(e)
+    end
+
+    config.after(:suite) do
+      ReverseCoverageRspec::Main.save_results
+    end
+  end
 end
 
 def account_sid
