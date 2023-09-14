@@ -30,18 +30,18 @@ RSpec.configure do |config|
     @holodeck = Holodeck.new
     @client.http_client = @holodeck
   end
-  if ENV['INTEL']
+  if ENV['TI']
     config.before(:suite) do
-      ReverseCoverageRspec::Main.start
+      HarnessRubyAgentRspec::Main.start
     end
 
     config.around do |e|
       e.run
-      ReverseCoverageRspec::Main.add(e)
+      HarnessRubyAgentRspec::Main.add(e)
     end
 
     config.after(:suite) do
-      ReverseCoverageRspec::Main.save_results
+      HarnessRubyAgentRspec::Main.save_results
     end
   end
 end
