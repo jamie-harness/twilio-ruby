@@ -30,6 +30,20 @@ RSpec.configure do |config|
     @holodeck = Holodeck.new
     @client.http_client = @holodeck
   end
+  if ENV['TI']
+    config.before(:suite) do
+      HarnessRubyAgentRspec::Main.start
+    end
+
+    config.around do |e|
+      e.run
+      HarnessRubyAgentRspec::Main.add(e)
+    end
+
+    config.after(:suite) do
+      HarnessRubyAgentRspec::Main.save_results
+    end
+  end
 end
 
 def account_sid
