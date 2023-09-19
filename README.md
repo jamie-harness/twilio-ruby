@@ -12,7 +12,7 @@ The individual releases [here][refdocs].
 
 ## Versions
 
-`twilio-ruby` uses a modified version of [Semantic Versioning](https://semver.org) for all changes. [See this document](VERSIONS.md) for details.
+`twilio-ruby` uses a modified version of [Semantic Versioning](https://semver.org) for all changes. [See this document](VERSIONS.md) for details. 
 
 ### Supported Ruby Versions
 
