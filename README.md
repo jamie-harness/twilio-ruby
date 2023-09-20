@@ -6,7 +6,7 @@
 
 ## Documentation
 
-The documentation for the Twilio API can be found [here][apidocs]. 
+The documentation for the Twilio API can be found [here][apidocs].
 
 The individual releases [here][refdocs].
 
