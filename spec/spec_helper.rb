@@ -43,7 +43,7 @@ RSpec.configure do |config|
     end
 
     config.after(:suite) do
-      HarnessRubyAgentRspec::Main.save_results
+      HarnessRubyAgentRspec::Main.save_results(ENV['TI_OUTPUT_PATH'] || 'tmp')
     end
   end
 end
