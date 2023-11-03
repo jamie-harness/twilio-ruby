@@ -1,5 +1,3 @@
-require "harness_ruby_agent"  if ENV['TI']
-
 if RUBY_VERSION.start_with?('3.0')
   require 'simplecov'
   require 'simplecov_json_formatter'
