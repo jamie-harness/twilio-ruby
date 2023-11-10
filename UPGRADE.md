@@ -3,7 +3,7 @@
 _After `5.0.0` all `MINOR` and `MAJOR` version bumps will have upgrade notes
 posted here._
 
-[2023-05-03] 5.x.x to 6.x.x
+[2023-05-03] 5.x.x to 6.x.x 
 -----------------------------
 ### Overview
 
