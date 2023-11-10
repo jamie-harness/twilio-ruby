@@ -1,4 +1,4 @@
-# frozen_string_literal: true 
+# frozen_string_literal: true  
 
 module Twilio
   def self.serialize_iso8601_date(date)
